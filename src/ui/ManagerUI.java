@@ -37,15 +37,16 @@ public class ManagerUI {
         boolean repeat = true;
         do{
             System.out.println("Задачи: ");
-            System.out.println("0. Выйти из программы");
-            System.out.println("1. Добавить новую книгу");
-            System.out.println("2. Список книг");
-            System.out.println("3. Зарегистрировать читателя");
-            System.out.println("4. Список читателей");
-            System.out.println("5. Выдать книгу читателю");
-            System.out.println("6. Вернуть книгу в библиотеку");
-            System.out.println("7. Список выданных книг");
-            System.out.print("Выберите задачу: ");
+            System.out.print("0. Выйти из программы |");
+            System.out.print("1. Добавить новую книгу |");
+            System.out.print("2. Список книг |");
+            System.out.print("3. Зарегистрировать читателя |");
+            System.out.println("4. Список читателей |");
+            System.out.print("5. Выдать книгу читателю |");
+            System.out.print("6. Вернуть книгу в библиотеку |");
+            System.out.print("7. Список выданных книг |");
+             System.out.println("8. Удалить книгу |");
+            System.out.println("Выберите задачу: ");
             Scanner scanner = new Scanner(System.in);
             String task = scanner.nextLine();
             switch (task) {
@@ -91,6 +92,16 @@ public class ManagerUI {
                     System.out.println("--- Список выданных книг ---");
                     libraryManager.printListReadBooks(histories);
                     break;
+                
+                case "8":
+                    System.out.println("--- Удаление книги ---");
+                    bookManager.printListBooks(books);
+                    System.out.println("Choose book for del");
+                    String numBookStr = scanner.nextLine();
+                    int numBook = Integer.parseInt(numBookStr);
+                    books[numBook-1]=null;
+                      break;
+                    
                 default:
                     System.out.println("Нет такой задачи.");
             }

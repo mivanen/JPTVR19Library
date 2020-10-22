@@ -21,6 +21,14 @@ public class SecureManager {
     
 private Scanner scanner = new Scanner(System.in);
 
+
+public static enum role
+{
+    READER,
+    MANAGER
+}
+
+
     public User checkTask(User[] users, Reader[] readers) {
         // Предоставим выбор пользователю:
         //  0. Выход из программы
