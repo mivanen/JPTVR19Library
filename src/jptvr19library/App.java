@@ -28,7 +28,7 @@ import ui.ReaderUI;
  * @author Melnikov
  */
 public class App {
-    private Book[] books = new Book[10];
+    //private Book[] books = new Book[10];
     private List<Book> listBooks=new ArrayList<>();
     private Reader[] readers = new Reader[10];
     private List<Reader> listReader=new ArrayList<>();
