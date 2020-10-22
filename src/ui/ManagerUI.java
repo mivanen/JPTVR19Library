@@ -73,6 +73,7 @@ public class ManagerUI {
                     System.out.println("--- Список читателей ---");
                     readerManager.printListReaders(readers);
                     break;
+                            
                 case "5":
                     System.out.println("--- Выдать книгу читателю ---");
                     History history = libraryManager.takeOnBook(books, readers);
